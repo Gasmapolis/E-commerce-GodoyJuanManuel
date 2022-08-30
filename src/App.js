@@ -5,6 +5,7 @@ import Title from './components/Text/title';
 
 import './components/NavBar/navBar.css'; 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
 function App() {
   return (
     <div className="App">
@@ -12,12 +13,8 @@ function App() {
       <Title msj="Mi primera App React" />
       <NavBar />
       </header>
-      <body>
-        <ItemListContainer greeting="Producto1" />
-        <ItemListContainer greeting="Producto2" />
-        <ItemListContainer greeting="Producto3" />
-        <ItemListContainer greeting="Producto4" />
-        <ItemListContainer greeting="Producto5" />
+      <body className='d-flex justify-content-center'>
+        <ItemListContainer greeting="Productos" />
       </body>
     </div>
   );
