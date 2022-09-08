@@ -4,7 +4,7 @@ import NavBar from './components/NavBar/navBar';
 import Title from './components/Text/title';
 
 import './components/NavBar/navBar.css'; 
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './components/container/ItemListContainer/ItemListContainer.jsx';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <NavBar />
       </header>
       <body className='d-flex justify-content-center'>
-        <ItemListContainer greeting="Productos" />
+      <ItemListContainer greeting="Productos" />
       </body>
     </div>
   );

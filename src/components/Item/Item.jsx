@@ -1,29 +1,25 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
+import ItemCount from '../ItemCount/Itemcount';
+import './Item.css'
+const Item = ({name,imagen, stock}) => {
 
-const ItemCard = ({name, stock}) => {
-  const [cantidad, setCantidad] = useState(0)
-  return (
-    <div className='col-md-4'>
+return(
+    
+        <div className=''>
 
-    <Card style={{ width: '18rem' }}>
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>Stock Disponible {stock}</Card.Text>
-        <Button variant="danger" className=' m-auto' onClick={() =>{
-        cantidad == '0'?console.log("CLICK"):setCantidad(cantidad - 1)
-        }}>-</Button>
-        <span className='p-5'>{cantidad}</span>
-        <Button variant="primary" className='m-auto' onClick={() =>{
-        cantidad == stock?console.log("CLICK"):setCantidad(cantidad + 1)
-        }}>+</Button>
-        <Button className='p-2' onClick={() =>{setCantidad(cantidad*0)}}>AGREGAR AL CARRITO</Button>
-      </Card.Body>
-    </Card>
-    </div>
-  );
-}
+        <Card className=' bg-transparent'>
+        <Card.Body className=' text-center'>
+            <Card.Title className='nameProducto text-light'>{name}</Card.Title>
+            <Card.Img  variant="top" src={imagen} className='imgProducto container border-2 border border-info' />
+            <Card.Text className=''>Stock Disponible {stock}</Card.Text>
+            <ItemCount stock={stock}/>
+        </Card.Body>
+        </Card>
+        </div>
 
-export default ItemCard;
+);
+};
+
+export default Item;
 
