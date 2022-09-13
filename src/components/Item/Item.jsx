@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import ItemCount from '../ItemCount/Itemcount';
+import BotonDetails from '../BotonDetails/BotonDetails';
 import './Item.css'
-const Item = ({name,imagen, stock}) => {
+const Item = ({name,imagen, stock, link}) => {
 
 return(
     
@@ -10,10 +10,10 @@ return(
 
         <Card className=' bg-transparent'>
         <Card.Body className=' text-center'>
-            <Card.Title className='nameProducto text-light'>{name}</Card.Title>
+            <Card.Title className='nameProducto text-light'><span className='name'>{name}</span></Card.Title>
             <Card.Img  variant="top" src={imagen} className='imgProducto container border-2 border border-info' />
             <Card.Text className=''>Stock Disponible {stock}</Card.Text>
-            <ItemCount stock={stock}/>
+            <BotonDetails link={link} />
         </Card.Body>
         </Card>
         </div>

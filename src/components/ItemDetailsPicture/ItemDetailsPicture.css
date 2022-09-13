@@ -1,0 +1,13 @@
+.galeria{
+    background-color: transparent ;
+}
+.contenedor{
+    background: rgb(245,245,251);
+    background: linear-gradient(43deg, rgba(245,245,251,1) 0%, rgba(30,22,85,1) 60%);
+}
+.foto{
+    width: 110px;
+    height: 180px;
+    padding: 0px;
+    margin: 0;
+}
